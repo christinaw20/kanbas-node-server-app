@@ -1,5 +1,5 @@
 import axios from "axios";
-export const USERS_API = process.env.REACT_APP_API_URL;
+export const USERS_API = process.env.REACT_APP_API_BASE;
 import * as dao from "./dao.js";
 
 // let currentUser = null;
