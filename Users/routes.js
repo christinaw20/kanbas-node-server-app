@@ -20,7 +20,7 @@ const findAllUsers = async (req, res) => {
   const updateUser = async (req, res) => {
     const { userId } = req.params;
     const status = await dao.updateUser(userId, req.body);
-    currentUser = await dao.findUserById(userId);
+    const currentUser = await dao.findUserById(userId);
     res.json(status);
   };
   const signup = async (req, res) => {
@@ -45,7 +45,7 @@ const findAllUsers = async (req, res) => {
    };
    const signout = (req, res) => {
     req.session.destroy();
-    currentUser = null;
+    const currentUser = null;
     res.sendStatus(200);
   };
   const profile = async (req, res) => {
